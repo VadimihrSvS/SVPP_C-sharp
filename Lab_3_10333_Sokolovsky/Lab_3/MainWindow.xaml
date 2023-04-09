@@ -1,0 +1,182 @@
+﻿<Window x:Class="Lab_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_3"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+        mc:Ignorable="d"
+        Title="Drive License" Height="450" Width="800" FontSize="20">
+    <Window.Resources>
+        <local:EnumGenderConverter x:Key="genderConverter"/>
+        <local:ImageConverter x:Key="imageConverter"/>
+        <ObjectDataProvider x:Key="EyesFromEnum"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}"> 
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:COLOREYES"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip" 
+                            Value="{Binding RelativeSource={RelativeSource Self}, 
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" 
+                            Value="{Binding RelativeSource={RelativeSource Self}, 
+                        Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <ControlTemplate x:Key="validationFailed">
+            <Border BorderBrush="Red" BorderThickness="5">
+                <AdornedElementPlaceholder/>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid x:Name="grid" >
+        <Grid.Background>
+            <ImageBrush ImageSource="images/3386851.jpg" />
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="DRIVER'S LICENSE" Grid.Column="1" Grid.ColumnSpan="2" FontSize="36"
+               FontFamily="Georgia" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <CheckBox x:Name="checkBoxDonor" IsChecked="{Binding Donor}"
+                  Grid.Row="6" Content="DONOR" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Image x:Name="image" Source="{Binding UriImage, Converter={StaticResource imageConverter}}" 
+               MaxHeight="300" Grid.RowSpan="6" Margin="20" MouseDown="image_MouseDown"/>
+        <TextBox x:Name="textBoxName" Text="{Binding Path=Name}"
+                 Grid.Column="1" Grid.Row="1" Margin="10"
+                  ToolTip="FirstName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <TextBox x:Name="textBoxAddress" Text="{Binding Path=Address}"
+                 Grid.Column="1" Grid.Row="2" Margin="10"
+                 ToolTip="Address" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        
+        <GroupBox Grid.Row="4" Grid.Column="1" Header="Sex" FontSize="13">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="radioButtonMale" IsChecked="{Binding Path=Gender, Converter={StaticResource genderConverter}, 
+                    ConverterParameter={x:Static local:GENDER.male}}"
+                             Content="male" VerticalAlignment="Center" Margin="5" FontSize="15"/>
+                <RadioButton x:Name="radioButtonFemale" IsChecked="{Binding Path=Gender, Converter={StaticResource genderConverter}, 
+                    ConverterParameter={x:Static local:GENDER.female}}"
+                             Content="female" VerticalAlignment="Center" Margin="5" FontSize="15"/>
+                <RadioButton x:Name="radioButtonVariant" IsChecked="{Binding Path=Gender, Converter={StaticResource genderConverter}, 
+                    ConverterParameter={x:Static local:GENDER.variant}}"
+                             Content="variant" VerticalAlignment="Center" Margin="5" FontSize="15"/>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Eyes" Margin="0 10 20 10"/>
+            <ComboBox x:Name="comboBoxEyes" SelectedValue="{Binding Eyes}" ItemsSource="{Binding Source={StaticResource EyesFromEnum}}"
+                      SelectedItem="{Binding Eyes}"
+                      Width="150" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Height" Margin="0 5 20 5"/>
+            <Slider x:Name="sliderHGT" Value="{Binding Height}"
+                    Minimum="144" Maximum="250" Width="170" 
+                    Margin="0 10 20 10" AutoToolTipPlacement="TopLeft"
+                    TickFrequency="6" TickPlacement="TopLeft" SmallChange="1" LargeChange="10"/>
+        </StackPanel>
+
+        <TextBox x:Name="textBoxNumber" 
+                 Grid.Column="2" Grid.Row="1" Margin="10" Validation.ErrorTemplate="{StaticResource validationFailed}"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <TextBox.Text>
+                <Binding Path="Number">
+                    <Binding.ValidationRules>
+                        <DataErrorValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+       
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal" Margin="20 5">
+            <Label Content="CLASS" VerticalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="textBoxClass" Validation.ErrorTemplate="{StaticResource validationFailed}"
+                     Grid.Row="1" Grid.Column="2" Margin="20 5" Width="50">
+                <TextBox.Text>
+                    <Binding Path="Class1">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+        
+        <StackPanel  Grid.Column="2" Grid.Row="3" Orientation="Horizontal" Margin="5">
+            <Label Content="ISS" VerticalAlignment="Center"/>
+            <DatePicker x:Name="datePickerISS"
+                        VerticalAlignment="Center" Margin="5">
+                <DatePicker.SelectedDate>
+                    <Binding Path="Iss">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </DatePicker.SelectedDate>
+            </DatePicker>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" Margin="5">
+            <Label Content="DOB" VerticalAlignment="Center"/>
+            <DatePicker x:Name="datePickerDOB"
+                        VerticalAlignment="Center" Margin="5">
+                <DatePicker.SelectedDate>
+                    <Binding Path="Dob">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </DatePicker.SelectedDate>
+            </DatePicker>
+        </StackPanel>
+        
+        <StackPanel  Grid.Column="2" Grid.Row="4" Orientation="Horizontal" Margin="5">
+            <Label  Content="EXP" VerticalAlignment="Center"/>
+            <DatePicker x:Name="datePickerEXP"  VerticalAlignment="Center" Margin="5">
+                <DatePicker.SelectedDate>
+                    <Binding Path="Exp">
+                        <Binding.ValidationRules>
+                            <DataErrorValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </DatePicker.SelectedDate>
+            </DatePicker>
+        </StackPanel>
+
+        <Button Content="Save" Grid.Column="0" Grid.Row="7" Margin="10" Click="ButtonSave_Click"/>
+        <Button Content="Load" Grid.Column="1" Grid.Row="7" Margin="10" Click="ButtonLoad_Click"/>
+        <Button Content="Clear" Grid.Column="2" Grid.Row="7" Margin="10" Click="ButtonClear_Click"/>
+
+    </Grid>
+</Window>
