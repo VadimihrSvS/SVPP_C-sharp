@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\background\background.png" />
+    <None Remove="images\finish\finish.png" />
+    <None Remove="images\nyan-cat\nyan-cat.gif" />
+    <None Remove="images\nyan-cat\rainbow.gif" />
+    <None Remove="images\nyan-cat\star.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Space\Cat.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\background\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\finish\finish.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\nyan-cat\nyan-cat.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\nyan-cat\rainbow.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\nyan-cat\star.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cross-mark.png" />
+    <None Remove="images\3386851.jpg" />
+    <None Remove="images\abstract-classic-blue-screensaver.zip" />
+    <None Remove="images\colorful-vintage-retro-background_36662-1295.avif" />
+    <None Remove="images\cross-mark.png" />
+    <None Remove="images\Homer_Simpson.jpg" />
+    <None Remove="images\Peter_Griffin.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cross-mark.png" />
+    <Resource Include="images\3386851.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\abstract-classic-blue-screensaver.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\colorful-vintage-retro-background_36662-1295.avif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\cross-mark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Homer_Simpson.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Peter_Griffin.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
