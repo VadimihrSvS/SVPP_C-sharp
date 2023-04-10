@@ -1,0 +1,17 @@
+D:\code\Lab_4_10333_Sokolovsky\Space\bin\Debug\net6.0-windows\Space.deps.json
+D:\code\Lab_4_10333_Sokolovsky\Space\bin\Debug\net6.0-windows\Space.dll
+D:\code\Lab_4_10333_Sokolovsky\Space\bin\Debug\net6.0-windows\Space.pdb
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.csproj.AssemblyReference.cache
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\UserControlNyanCat.g.cs
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space_MarkupCompile.cache
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space_MarkupCompile.lref
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\UserControlNyanCat.baml
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.g.resources
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.AssemblyInfoInputs.cache
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.AssemblyInfo.cs
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.csproj.CoreCompileInputs.cache
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.dll
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\refint\Space.dll
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\Space.pdb
+D:\code\Lab_4_10333_Sokolovsky\Space\obj\Debug\net6.0-windows\ref\Space.dll

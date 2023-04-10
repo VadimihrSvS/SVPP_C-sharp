@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gV5s3OebQ73OHfH+1RjZUn4kXIwFi/d0B+uPgEdWzhhTP/YuetrEaSVWrvT5Xgr/JsdRPFW+YzSABX8TV8bH2g==",
+  "success": true,
+  "projectFilePath": "D:\\code\\Lab_4_10333_Sokolovsky\\Space\\Cat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\xamlanimatedgif\\2.1.1\\xamlanimatedgif.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

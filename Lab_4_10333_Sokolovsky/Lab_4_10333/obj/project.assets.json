@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "XamlAnimatedGif/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/XamlAnimatedGif.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/XamlAnimatedGif.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Cat/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "XamlAnimatedGif": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Cat.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cat.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "XamlAnimatedGif/2.1.1": {
+      "sha512": "skJn8g+2X0zir822mG3+nIWG7F1AScEeYVxcBHZR3+m3fWJF+tC5uPNZS+mYAO4NtT3wW0ANN92xCcaNcL2x4g==",
+      "type": "package",
+      "path": "xamlanimatedgif/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "assets/xamlanimatedgif.png",
+        "lib/net45/XamlAnimatedGif.dll",
+        "lib/net45/XamlAnimatedGif.pdb",
+        "lib/net5.0-windows7.0/XamlAnimatedGif.dll",
+        "lib/net5.0-windows7.0/XamlAnimatedGif.pdb",
+        "lib/netcoreapp3.1/XamlAnimatedGif.dll",
+        "lib/netcoreapp3.1/XamlAnimatedGif.pdb",
+        "xamlanimatedgif.2.1.1.nupkg.sha512",
+        "xamlanimatedgif.nuspec"
+      ]
+    },
+    "Cat/1.0.0": {
+      "type": "project",
+      "path": "../Space/Cat.csproj",
+      "msbuildProject": "../Space/Cat.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Cat >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\code\\Lab_4_10333_Sokolovsky\\Lab_4_10333\\Lab_4_10333.csproj",
+      "projectName": "Lab_4_10333",
+      "projectPath": "D:\\code\\Lab_4_10333_Sokolovsky\\Lab_4_10333\\Lab_4_10333.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\Lab_4_10333_Sokolovsky\\Lab_4_10333\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "D:\\code\\Lab_4_10333_Sokolovsky\\Space\\Cat.csproj": {
+              "projectPath": "D:\\code\\Lab_4_10333_Sokolovsky\\Space\\Cat.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

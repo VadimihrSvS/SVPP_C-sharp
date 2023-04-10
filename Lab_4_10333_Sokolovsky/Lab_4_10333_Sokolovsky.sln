@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_4_10333", "Lab_4_10333\Lab_4_10333.csproj", "{473FBFB5-687E-41C7-86EE-6FE191A9B338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_4_10333", "Lab_4_10333\Lab_4_10333.csproj", "{473FBFB5-687E-41C7-86EE-6FE191A9B338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space", "Space\Space.csproj", "{4C4807FD-0061-4E26-9064-088BED29C26C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cat", "Space\Cat.csproj", "{4C4807FD-0061-4E26-9064-088BED29C26C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

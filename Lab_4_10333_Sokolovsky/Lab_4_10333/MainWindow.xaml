@@ -12,8 +12,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
-        <Image Source="/images/background/background.png" Stretch="Fill" Grid.RowSpan="3"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/images/background/background.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+        <Button Grid.Row="3" Margin="10" Content="Start" FontSize="24"/>
+        <Button Grid.Row="3" Grid.Column="1" Margin="10" Content="Stop" FontSize="24"/>
+        <Button Grid.Row="3" Grid.Column="2" Margin="10" Content="Reset" FontSize="24"/>
     </Grid>
 </Window>

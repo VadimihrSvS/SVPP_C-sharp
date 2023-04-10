@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace Space
+namespace Cat
 {
     /// <summary>
     /// Логика взаимодействия для UserControlNyanCat.xaml
@@ -34,12 +34,14 @@ namespace Space
 
             textBlockSpeed.DataContext = cat;
             Binding bindingSpeed = new Binding("Speed");
-            textBlockHp.SetBinding(TextBlock.TextProperty, bindingSpeed);
+            textBlockSpeed.SetBinding(TextBlock.TextProperty, bindingSpeed);
 
             this.DataContext = cat;
             this.SetBinding(Canvas.LeftProperty, new Binding("Y"));          
             
         }
+
+        
 
 
 
