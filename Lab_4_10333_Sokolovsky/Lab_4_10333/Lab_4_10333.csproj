@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Space\Space.csproj" />
+    <ProjectReference Include="..\Space\Cat.csproj" />
   </ItemGroup>
 
   <ItemGroup>

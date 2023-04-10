@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Space
+namespace Cat
 {
     public class NyanCat: INotifyPropertyChanged
     {
